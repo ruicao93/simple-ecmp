@@ -1,0 +1,52 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1481182341476
+Build-Jdk: 1.8.0_101
+Built-By: cr
+Bundle-ClassPath: WEB-INF/classes
+Bundle-Description: Reactive forwarding with ECMP feature.
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-app-ecmp-simple
+Bundle-SymbolicName: org.onosproject.onos-app-ecmp-simple
+Bundle-Version: 1.6.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: 
+ org.onosproject.ecmp.rest;uses:="javax.ws.rs,javax.ws.rs.core,org.onlab
+ .rest,org.onosproject.rest";version="1.6.0",
+ org.onosproject.ecmp;uses:="org.onlab.packet,org.onosproject.cfg,org.on
+ osproject.core,org.onosproject.net,org.onosproject.net.flow,org.onospro
+ ject.net.flowobjective,org.onosproject.net.host,org.onosproject.net.pac
+ ket,org.onosproject.net.topology,org.osgi.service.component";version="1
+ .6.0"
+Import-Package: 
+ com.fasterxml.jackson.databind;version="[2.7,3)",
+ com.fasterxml.jackson.databind.node;version="[2.7,3)",
+ com.google.common.collect;version="[19.0,20)",
+ javax.ws.rs;version="[2.0,3)",
+ javax.ws.rs.core;version="[2.0,3)",
+ org.onlab.packet;version="[1.6,2)",
+ org.onlab.rest;version="[1.6,2)",
+ org.onlab.util;version="[1.6,2)",
+ org.onosproject.cfg;version="[1.6,2)",
+ org.onosproject.codec;version="[1.6,2)",
+ org.onosproject.core;version="[1.6,2)",
+ org.onosproject.ecmp,
+ org.onosproject.event;version="[1.6,2)",
+ org.onosproject.net;version="[1.6,2)",
+ org.onosproject.net.flow;version="[1.6,2)",
+ org.onosproject.net.flow.criteria;version="[1.6,2)",
+ org.onosproject.net.flow.instructions;version="[1.6,2)",
+ org.onosproject.net.flowobjective;version="[1.6,2)",
+ org.onosproject.net.host;version="[1.6,2)",
+ org.onosproject.net.link;version="[1.6,2)",
+ org.onosproject.net.packet;version="[1.6,2)",
+ org.onosproject.net.topology;version="[1.6,2)",
+ org.onosproject.rest;version="[1.6,2)",
+ org.osgi.service.component;version="[1.2,2)",
+ org.slf4j;version="[1.7,2)",
+ org.glassfish.jersey.servlet;version="[2.22,3)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.onosproject.ecmp.SimpleECMPForwarding.xm
+ l
+Tool: Bnd-3.0.0.201509101326
+Web-ContextPath: /onos
